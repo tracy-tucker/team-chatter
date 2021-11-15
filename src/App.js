@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './components/Header';
 import './App.css';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     // Block Element Modifier naming convention
     <div className="app">
       {/* Header */}
+      <Header />
       {/* Sidebar */}
       {/* React-Router -> Chat screen */}
     </div>
