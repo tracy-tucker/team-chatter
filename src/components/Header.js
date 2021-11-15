@@ -26,7 +26,7 @@ function Header() {
                 {/* Input */}
                 <input placeholder="Search your team" />
             </div>
-            <div classname="header__right">
+            <div className="header__right">
                 {/* Help icon */}
                 <HelpOutlineIcon />
             </div>
