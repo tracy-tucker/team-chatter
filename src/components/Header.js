@@ -35,5 +35,3 @@ function Header() {
 }
 
 export default Header
-
-// 31:28
