@@ -6,6 +6,12 @@ function SidebarOption({Icon, title}) {
         <div className="sidebarOption">
             {/* only render Icon if it exists */}
             {Icon && <Icon className="sidebarOption__icon" />}
+            {/* If no icon, then it represents a channel */}
+            {Icon ? (
+                <h3>{title}</h3>
+            ) : (
+                <h3><span className="sidebarOption__hash">#</span> {title}</h3>
+            )}
         </div>
     )
 }

@@ -10,12 +10,13 @@ function Sidebar() {
         <div className="sidebar">
             <div className="sidebar__header">
                 <div className="sidebar__info">
-                    <h2>General Notes</h2>
+                    <h2>TEAM CHATTER</h2>
                     <h3><FiberManualRecordIcon />Tracy Tucker</h3>
                 </div>
                 <CreateIcon />
             </div>
             <SidebarOption Icon={InsertCommentIcon} title="Threads" />
+            <SidebarOption title="General Notes" />
         </div>
     )
 }
