@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/Sidebar.css'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import CreateIcon from '@mui/icons-material/Create';
+import InsertCommentIcon from '@mui/icons-material/InsertComment';
 import SidebarOption from './SidebarOption';
 
 function Sidebar() {
@@ -13,8 +14,8 @@ function Sidebar() {
                     <h3><FiberManualRecordIcon />Tracy Tucker</h3>
                 </div>
                 <CreateIcon />
-                <SidebarOption Icon={} title="Threads" />
             </div>
+            <SidebarOption Icon={InsertCommentIcon} title="Threads" />
         </div>
     )
 }
