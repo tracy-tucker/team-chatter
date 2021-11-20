@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import InfoIcon from '@mui/icons-material/Info';
 import db from '../firebase/config';
+import Message from './Message';
 
 function Chat() {
     
@@ -34,6 +35,7 @@ function Chat() {
                 <div className="chat__headerLeft">
                     <h4 className="chat__channelName">
                         {/* Pull name from DB */}
+                        {/* ? ES7 optional chaining, adding a try catch. overlooks error and keeps going */}
                         <strong>#{roomDetails?.name}</strong>
                         <StarBorderIcon />
                     </h4>
@@ -46,6 +48,15 @@ function Chat() {
             </div>
             <div className="chat__messages">
                 {/* Messages go here */}
+                {roomMessages.map(({message, timestamp, user, userImage}) => (
+                    <Message
+                    key={timestamp}
+                    message={message}
+                    timestamp={timestamp}
+                    user={user}
+                    userImage={userImage}
+                    />
+                ))}
             </div>
         </div>
     )
