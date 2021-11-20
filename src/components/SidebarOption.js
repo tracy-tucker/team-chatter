@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/SidebarOption.css'
 import { useNavigate } from 'react-router-dom'
+import db from '../firebase/config';
 
 function SidebarOption({Icon, title, id, addChannelOption}) {
     // useNavigate replaces useHistory in react-router-dom v6
@@ -10,16 +11,19 @@ function SidebarOption({Icon, title, id, addChannelOption}) {
 
     const selectChannel = () => {
         if (id) {
-            if (id) {
-                navigate.push(`/room/${id}`);
-            } else {
-                navigate.push(title);
-            }
+            navigate(`/room/${id}`);
+        } else {
+            navigate(title);
         }
     }
 
     const addChannel = () => {
-        //
+        const channelName = prompt('Please enter the channel name')
+        if (channelName) {
+            db.collection('rooms').add({
+                name: channelName
+            })
+        }
     }
 
     return (
