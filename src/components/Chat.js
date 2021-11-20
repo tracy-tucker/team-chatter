@@ -9,7 +9,7 @@ function Chat() {
     
     const { roomId } = useParams()
     const [roomDetails, setRoomDetails] = useState(null)
-    const [roomMessages, setRoomMessages] = useState(null)
+    const [roomMessages, setRoomMessages] = useState([])
 
     useEffect(() => {
         if (roomId) {
@@ -44,8 +44,13 @@ function Chat() {
                     </p>
                 </div>
             </div>
+            <div className="chat__messages">
+                {/* Messages go here */}
+            </div>
         </div>
     )
 }
 
 export default Chat
+
+// 2:39:41
