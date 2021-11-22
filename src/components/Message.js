@@ -14,3 +14,5 @@ function Message({ message, timestamp, user, userImage}) {
 }
 
 export default Message
+
+// 2:57:36

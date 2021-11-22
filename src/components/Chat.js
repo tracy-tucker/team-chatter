@@ -63,5 +63,3 @@ function Chat() {
 }
 
 export default Chat
-
-// 2:39:41
