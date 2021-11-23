@@ -23,6 +23,11 @@
 .login__container > Button {
     margin-top: 50px;
     text-transform: inherit !important;
-    background-color: #0a8d48;
+    /* background-color: #0a8d48; */
+    background-color: #340e36;
     color: white;
+}
+
+.login__container > Button:hover {
+    background-color: #c3ce2f;
 }

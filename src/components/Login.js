@@ -18,7 +18,7 @@ function Login() {
     return (
         <div className="login">
             <div className="login__container">
-                <img src="https://res.cloudinary.com/tracyr/image/upload/v1483126281/teamPlayer_lgtva8.png" alt="login icon" />
+                <img src="https://res.cloudinary.com/tracyr/image/upload/v1637672702/team-chatter-icon_n9vk9m.png" alt="login icon" />
                 <h1>Sign in to Team Chatter HQ</h1>
                 <p>team-chatter.channel.com</p>
                 <Button onClick={signIn}>Sign in with Google</Button>
