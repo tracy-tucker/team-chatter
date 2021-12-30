@@ -9,7 +9,7 @@ import { useStateValue } from './context/StateProvider';
 
 function App() {
   // const [user, setUser] = useState(null)
-  const [{user}, dispatch] = useStateValue()
+  const [{user}] = useStateValue()
 
   return (
     // Block Element Modifier naming convention
