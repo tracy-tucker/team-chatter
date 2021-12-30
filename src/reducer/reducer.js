@@ -10,12 +10,14 @@ export const actionTypes = {
 const reducer = (state, action) => {
     console.log(action)
     
+    //payload = user
     switch(action.type) {
         case actionTypes.SET_USER:
             return {
                 ...state,
                 user: action.user
             }
+            // if no user
         default:
             return state
     }
