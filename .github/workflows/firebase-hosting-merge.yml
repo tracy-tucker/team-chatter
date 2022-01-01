@@ -6,7 +6,6 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - master
-
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -19,4 +18,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEAM_CHATTER_A34DA }}'
           channelId: live
           projectId: team-chatter-a34da
-      
