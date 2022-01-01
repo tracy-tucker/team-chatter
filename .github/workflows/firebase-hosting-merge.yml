@@ -19,9 +19,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEAM_CHATTER_A34DA }}'
           channelId: live
           projectId: team-chatter-a34da
-      - name: Make envfile
-        - uses: SpicyPizza/create-envfile@v1
-        - with:
-            envkey_DEBUG: false
-            envkey_REACT_APP_FIREBASE_API_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
-            file_name: .env
+      
