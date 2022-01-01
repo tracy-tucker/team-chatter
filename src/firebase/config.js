@@ -1,4 +1,4 @@
-import {initializeApp} from 'firebase/app'
+import firebase from 'firebase/app'
 import 'firebase/auth';        // for authentication
 import 'firebase/storage';     // for storage
 import 'firebase/database';    // for realtime database
@@ -16,13 +16,13 @@ const firebaseConfig = {
     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
   };
 
-  const firebaseApp = initializeApp.initializeApp(firebaseConfig)
+  const firebaseApp = firebase.initializeApp(firebaseConfig)
 
   const db = firebaseApp.firestore();
 
-  const auth = initializeApp.auth();
+  const auth = firebase.auth();
 
-  const provider = new initializeApp.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
 
   // explicit export
   export {auth, provider};
