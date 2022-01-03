@@ -21,7 +21,6 @@ jobs:
           envkey_REACT_FIREBASE_APP_API_KEY: ${{secrets.REACT_FIREBASE_APP_API_KEY}}
           directory: './'
           file_name: '.env'
-      - name: Build and Deploy
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
