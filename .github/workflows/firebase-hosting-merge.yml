@@ -10,17 +10,19 @@ name: Deploy to Firebase Hosting on merge
 # env:
 #   BUILD_CONFIGURATION: Release
 
-jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Make envfile
+env:
+  - name: Make envfile
       - uses: SpicyPizza/create-envfile@v1
         with:
           envkey_REACT_FIREBASE_APP_API_KEY: ${{secrets.REACT_FIREBASE_APP_API_KEY}}
           directory: './'
           file_name: '.env'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
