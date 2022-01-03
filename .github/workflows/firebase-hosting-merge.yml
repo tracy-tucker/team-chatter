@@ -7,8 +7,8 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - master
 
-env:
-  BUILD_CONFIGURATION: Release
+name: Run a one-line script
+run: env
 
 jobs:
   build_and_deploy:
